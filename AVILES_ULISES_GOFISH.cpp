@@ -48,12 +48,12 @@ int main() {
 	}
 	//cin N_juadores
 	string n_jugadores = "0";
-	cout << "Bienvenido a Go-Fish!\nIntroduce el número de jugadores: ";
+	cout << "Bienvenido a Go-Fish!\nIntroduce el nÃºmero de jugadores: ";
 	while (n_jugadores != "2" && n_jugadores != "3" && n_jugadores != "4")
 	{
 		cin >> n_jugadores;
 		if (n_jugadores != "2" && n_jugadores != "3" && n_jugadores != "4")
-			cout << "Introduce un valor válido: ";
+			cout << "Introduce un valor vÃ¡lido: ";
 	}
 	//Repartir
 	string manos[6][4];
@@ -81,7 +81,7 @@ int main() {
 			cin >> opcion;
 			if (opcion != "1" && opcion != "2" || opcion == "2" && pool == " ")
 			{
-				cout << "Introduce un valor válido: ";
+				cout << "Introduce un valor vÃ¡lido: ";
 				opcion = "0";
 			}
 		}
@@ -123,13 +123,13 @@ int main() {
 		else
 		{
 			opcion = "0";
-			cout << "\n\nIntroduce la posición de la carta que deseas tirar al pool: ";
+			cout << "\n\nIntroduce la posiciÃ³n de la carta que deseas tirar al pool: ";
 			while (opcion != "1" && opcion != "2" && opcion != "3" && opcion != "4" && opcion != "5" && opcion != "6")
 			{
 				cin >> opcion;
 				if (opcion != "1" && opcion != "2" && opcion != "3" && opcion != "4" && opcion != "5" && opcion != "6"||valido(to_string(stoi(opcion) - 1), manos, turno - 1, v) == false)
 				{
-					cout << "Introduce un valor válido: ";
+					cout << "Introduce un valor vÃ¡lido: ";
 					opcion = "0";
 				}
 			}
@@ -346,7 +346,7 @@ void desicion(bool gameOver, string jugadas[4], short n_jugadores)
 		{
 			for (int i = 0; i < n_jugadores; i++)
 			{
-				/*cout << "Tamaño: "<<jugadas[i].size() << "\n";*/
+				/*cout << "TamaÃ±o: "<<jugadas[i].size() << "\n";*/
 				if (jugadas[i].size() != 0)
 				{
 					for (int x = 0; x < jugadas[i].size(); x++)
